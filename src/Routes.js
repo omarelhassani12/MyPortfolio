@@ -2,7 +2,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './containers/Home';
-import About from './containers/About/AboutMe';
+// import About from './containers/About/AboutMe';
 import Project from './containers/Projects/Project';
 import Skills from './containers/Skills/Skill';
 import Experience from './containers/Experiences/Experience';
@@ -16,7 +16,7 @@ const AppRoutes = () => {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
+        {/* <Route path="/about" element={<About />} /> */}
         <Route path="/projects" element={<Project />} />
         <Route path="/skills" element={<Skills />} />
         <Route path="/experience" element={<Experience />} />
