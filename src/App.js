@@ -16,7 +16,6 @@ function App() {
       <div className="content-container">
         <AppRoutes />
       </div>
-      {/* WhatsAppButton component */}
       <WhatsAppButton />
     </div>
   );
