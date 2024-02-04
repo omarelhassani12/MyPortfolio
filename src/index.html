@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            height: 100vh; /* Use viewport height to make it take the full height of the viewport */
+            background-color: #333;
+            color: white;
+        }
+
+        .image-container {
+            flex: 1; /* Takes the left half of the width */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden; /* Hide overflow to make it circular */
+            border-radius: 50%; /* Make it circular */
+            margin-right: 20px; /* Add some margin between image and text */
+        }
+
+        .image-container img {
+            width: 60%; /* Make sure the image covers the container */
+            height: 60%;
+            object-fit: cover; /* Ensure the image covers the container without stretching */
+            border-radius: 50%; /* Make it circular */
+        }
+
+        .text-container {
+            flex: 1; /* Takes the right half of the width */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1, p {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        p {
+            font-style: italic;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="./assets/img/perssonalImg.jpg" alt="Personal Image">
+    </div>
+    <div class="text-container">
+        <h1>Welcome to My Portfolio</h1>
+        <p>This is the home page of my portfolio. Feel free to explore!</p>
+    </div>
+
+    <script>
+        document.body.addEventListener('click', function() {
+            window.location.href = './path/to/your/other/page.html'; 
+        });
+    </script>
+</body>
+</html>

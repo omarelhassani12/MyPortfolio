@@ -1,0 +1,22 @@
+/* App.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Use viewport height to make it take the full height of the viewport */
+}
+
+.header-nav-container {
+  flex: 0 0 auto; /* Fix the header and navigation at the top */
+}
+
+.content-container {
+  flex: 1; /* Allow the content to take the remaining space */
+  overflow-y: auto; /* Enable scrolling for content if needed */
+}
