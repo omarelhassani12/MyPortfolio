@@ -1,10 +1,55 @@
-/* Projects.css */
+/* Project.css */
 
-section {
-    padding: 2rem;
-  }
-  
-  h2 {
-    color: #333;
-  }
-  
+.project-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.project-filter {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 25px;
+}
+
+.project-filter button {
+  padding: 10px;
+  background-color: #999;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.project-filter button.active {
+  background-color: #2ECC71;
+}
+
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 -10px; /* Add negative margin to offset the padding in the item */
+}
+
+.project-item {
+  width: calc(25% - 20px); /* Adjust the width as needed */
+  margin-bottom: 20px;
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  transition: background-color 0.3s ease;
+  box-sizing: border-box; /* Include padding and border in the width calculation */
+}
+
+.project-item:hover {
+  background-color: #e0e0e0;
+}
+
+.project-item h3 {
+  margin-top: 0;
+}
+
+.project-item p {
+  margin-bottom: 0;
+}

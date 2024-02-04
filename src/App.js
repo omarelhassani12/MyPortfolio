@@ -1,8 +1,9 @@
 // App.js
 import React from 'react';
 import './App.css';
-import Header from './components/Header';
-import Navigation from './components/Navigation';
+import Header from './components/Header/Header';
+import Navigation from './components/Navigation/Navigation';
+import Footer from './components/Footer/Footer';
 import AppRoutes from './Routes';
 import WhatsAppButton from './components/WhatsappButton/WhatsAppButton';
 
@@ -17,6 +18,7 @@ function App() {
         <AppRoutes />
       </div>
       <WhatsAppButton />
+      <Footer />
     </div>
   );
 }

@@ -14,7 +14,7 @@ function Home() {
         <div className="content">
           <h3>About Me</h3>
           <p>
-            I am Omar EL HASSANI, a dedicated and passionate web and mobile developer, certified in AppSec (CAP), with a knack for crafting intuitive UX/UI experiences. Hailing from Marrakesh-Safi, Morocco, I bring a unique blend of technical expertise and artistic sensibility to every project.
+            This is a dedicated and passionate web and mobile developer, certified in AppSec (CAP), with a knack for crafting intuitive UX/UI experiences. Hailing from Marrakesh-Safi, Morocco, I bring a unique blend of technical expertise and artistic sensibility to every project.
           </p>
           <p>
             My journey in computer engineering has equipped me with a strong foundation, and I am always eager to explore new opportunities to expand my skills and stay abreast of the latest technological trends. I approach each project with the goal of providing efficient technical solutions while infusing creativity into the design process.

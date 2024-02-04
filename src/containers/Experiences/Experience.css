@@ -1,0 +1,15 @@
+/* Experience.css */
+
+.vertical-timeline-container .custom-timeline-element .vertical-timeline-element-date {
+  color: #000;
+}
+
+.vertical-timeline-container {
+  width: 1000px !important;
+}
+
+.custom-timeline-element {
+  color: #fff !important;
+}
+
+
