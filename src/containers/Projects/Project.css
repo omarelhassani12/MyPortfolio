@@ -1,5 +1,7 @@
 /* Project.css */
 
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
 .projects-container {
   max-width: 1000px;
   width: 100%;
@@ -92,3 +94,56 @@ label {
 .project-card:hover .category-tag {
   opacity: 1; 
 }
+
+.pagination{
+  display: flex;
+  justify-content: space-between;
+}
+.paginationButtons {
+  display: flex;
+  justify-content: flex-end;
+  width: 20%;
+
+}
+
+.paginationButtons .paginationButton{
+  background-color: #e74c3c;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  margin-left: 10px;
+  border: 0;
+  cursor: pointer;
+}
+
+.notAnyPage {
+  background-color: #999;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  margin-left: 10px;
+  border: 0;
+  cursor: not-allowed;
+}
+
+
+/* .project-icons {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.project-icons a {
+  margin-right: 10px;
+}
+
+.github-icon {
+  color: #ffffff;
+}
+
+.link-icon {
+  color: #ffffff; 
+}
+ */

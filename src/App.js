@@ -6,20 +6,23 @@ import Navigation from './components/Navigation/Navigation';
 import Footer from './components/Footer/Footer';
 import AppRoutes from './Routes';
 import WhatsAppButton from './components/WhatsappButton/WhatsAppButton';
+import NoSelectWrapper from './NoSelectWrapper';
 
 function App() {
   return (
-    <div className="app-container">
-      <div className="header-nav-container">
-        <Header />
-        <Navigation />
+    <NoSelectWrapper>
+      <div className="app-container">
+        <div className="header-nav-container">
+          <Header />
+          <Navigation />
+        </div>
+        <div className="content-container">
+          <AppRoutes />
+        </div>
+        <WhatsAppButton />
+        <Footer />
       </div>
-      <div className="content-container">
-        <AppRoutes />
-      </div>
-      <WhatsAppButton />
-      <Footer />
-    </div>
+    </NoSelectWrapper>
   );
 }
 

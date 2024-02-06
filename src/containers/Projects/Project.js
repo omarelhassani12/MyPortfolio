@@ -1,9 +1,13 @@
 // Project.js
 
-import React, { useState } from 'react';
+import React, { useState, useEffect  }     from 'react';
 import './Project.css';
-import ofpptImage from '../../assets/companies/ofppt.png';
+import Modal from 'react-modal';
 
+
+
+import ofpptImage from '../../assets/companies/devosoft.png';
+const projectsPerPage = 12;
 
 const allProjects = [
   { id: 0, title: 'Tabibi', category: 'Mobile', image: ofpptImage, url: 'https://github.com/omarelhassani12/Tabibi' },
@@ -21,15 +25,65 @@ const allProjects = [
   { id: 12, title: 'Staffs Management System', category: 'Web', image: ofpptImage, url: 'https://github.com/omarelhassani12/SimpleStaffManagement' },
 ];
 
+
 function Projects() {
   const [activeFilter, setActiveFilter] = useState('All');
+  const [currentPage, setCurrentPage] = useState(1);
 
   const filteredProjects = activeFilter === 'All'
     ? allProjects
     : allProjects.filter(project => project.category === activeFilter);
 
+  const totalPages = Math.ceil(filteredProjects.length / projectsPerPage);
+
+  const handleNextPage = () => {
+    setCurrentPage(currentPage === totalPages ? currentPage : currentPage + 1);
+  };
+
+  const handlePreviousPage = () => {
+    setCurrentPage(currentPage === 1 ? totalPages : currentPage - 1);
+  };
+
+  const startIndex = (currentPage - 1) * projectsPerPage;
+  const endIndex = startIndex + projectsPerPage;
+  const displayedProjects = filteredProjects.slice(startIndex, endIndex);
+
+
+  //for the model
+  const [modalIsOpen, setModalIsOpen] = useState(true);
+
+
+  useEffect(() => {
+    // Close the modal after 3 seconds
+    const timeout = setTimeout(() => {
+      setModalIsOpen(false);
+    }, 1000);
+
+    // Cleanup function to clear the timeout
+    return () => clearTimeout(timeout);
+  }, []);
+
+
+  
   return (
     <div className="projects-container">
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={() => setModalIsOpen(false)}
+        contentLabel="Alert"
+        style={{
+          content: {
+            width: '25%',
+            height: '10%',
+            margin: 'auto',
+            color: 'red', 
+            borderRadius: '20px', 
+          }
+        }}
+      >
+        <h4>To view details, please click on the project title.</h4>
+      </Modal>
+
       <div className="filter-container">
         <select
           id="filter-select"
@@ -44,17 +98,54 @@ function Projects() {
       </div>
 
       <div className="projects-list">
-        {filteredProjects.map((project, index) => (
+        {displayedProjects.map((project, index) => (
           <div key={index} className="project-card">
-            <a href="#">
+            <a href={project.url}>
               <div className="project-background" style={{ backgroundImage: `url(${project.image})` }}></div>
               <div className="project-content">
-                <h3><a href={project.url}>{project.title}</a></h3>
+                <h3><a href='#'>{project.title}</a></h3>
                 <span className="category-tag">{project.category}</span>
               </div>
             </a>
           </div>
         ))}
+      </div>
+      
+      {/* <div className="projects-list">
+        {displayedProjects.map((project, index) => (
+          <div key={index} className="project-card">
+            <a href={project.url}>
+              <div className="project-background" style={{ backgroundImage: `url(${project.image})` }}></div>
+              <div className="project-content">
+                <h3><a href='#'>{project.title}</a></h3>
+                <span className="category-tag">{project.category}</span>
+              </div>
+            </a>
+            <div className="project-icons">
+              {project.url && project.url.startsWith('https://github.com') && (
+                <a href={project.url} target="_blank" rel="noopener noreferrer">
+                  <i className="fab fa-github github-icon"></i>
+                </a>
+              )}
+              {project.url && !project.url.startsWith('https://github.com') && (
+                <a href={project.url} target="_blank" rel="noopener noreferrer">
+                  <i className="fas fa-external-link-alt link-icon"></i>
+                </a>
+              )}
+            </div>
+
+          </div>
+        ))}
+      </div> */}
+
+      <div className="pagination">
+        <div>
+          <span>Page {currentPage} from {totalPages}</span>
+        </div>
+        <div className="paginationButtons">
+          <button onClick={handlePreviousPage} className={currentPage === 1 ? 'notAnyPage' : 'paginationButton'}>Back</button>
+          <button onClick={handleNextPage} className={currentPage === totalPages ? 'notAnyPage' : 'paginationButton'}>Next</button>
+      </div>
       </div>
     </div>
   );
