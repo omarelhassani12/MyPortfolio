@@ -14,9 +14,8 @@ function Certificates() {
       name: "Certificate in JavaScript Fundamentals",
       issuer: "ABC Institute",
       date: "March 2022",
-      backgroundImage: "url('path/to/javascript_certificate.jpg')"
+      backgroundImage: require('../../assets/certificates/CAP.png')
     },
-    // Add more certificate objects with background images as needed
   ];
 
   return (
