@@ -1,7 +1,5 @@
 /* Project.css */
 
-@import '~@fortawesome/fontawesome-free/css/all.css';
-
 .projects-container {
   max-width: 1000px;
   width: 100%;
@@ -12,7 +10,7 @@
   position: fixed;
   top: 35%;
   left: 20px;
-  z-index: 1;
+  z-index: -1;
 }
 
 label {
@@ -129,21 +127,3 @@ label {
 }
 
 
-/* .project-icons {
-  display: flex;
-  align-items: center;
-  flex: 1;
-}
-
-.project-icons a {
-  margin-right: 10px;
-}
-
-.github-icon {
-  color: #ffffff;
-}
-
-.link-icon {
-  color: #ffffff; 
-}
- */
