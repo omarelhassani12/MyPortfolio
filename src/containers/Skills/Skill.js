@@ -1,16 +1,25 @@
-// Projects.js
-
+// Skill.js
 import React from 'react';
 import './Skill.css';
+import { skillCards } from './SkillData.js';
 
-
-function Projects() {
+function Skills() {
   return (
-    <section id="project">
-      <h2>Skills</h2>
-      {/* Your projects content goes here */}
+    <section id="skills">
+      <div className="skills-container">
+        {skillCards.map((card, index) => (
+          <div className="skill-card" key={index}>
+            <h3>{card.title}</h3>
+            <ul>
+              {card.skills.map((skill, index) => (
+                <li key={index}>{skill}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
     </section>
   );
 }
 
-export default Projects;
+export default Skills;

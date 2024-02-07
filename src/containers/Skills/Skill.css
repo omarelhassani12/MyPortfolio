@@ -1,10 +1,37 @@
-/* Projects.css */
+/* Skills.css */
 
-section {
-    padding: 2rem;
-  }
-  
-  h2 {
-    color: #333;
-  }
-  
+#skills {
+  width: 100%;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.skill-card {
+  width: calc(20% - 40px); 
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  margin-bottom: 20px;
+  margin-right: 20px; 
+}
+
+
+.skill-card h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.skill-card ul {
+  padding-left: 20px;
+}
+
+.skill-card li {
+  list-style: none;
+  margin-bottom: 5px;
+}
