@@ -1,10 +1,61 @@
-/* Projects.css */
+/* Certificate.css */
+#certificates {
+  width: 100%;
+}
 
-section {
-    padding: 2rem;
+.certificates-list {
+  height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.certificate-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.certificate-item {
+  position: relative;
+  width: calc(20% - 10px); 
+  margin-left: 20px;
+  margin-bottom: 20px;
+  padding: 10px; 
+  border: 1px solid #ccc; 
+  background-size: cover; 
+  background-position: initial; 
+}
+
+.certificate-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 95%;
+  height: 95%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  background-color: rgba(0, 0, 0, 0.5); 
+  padding: 10px; 
+  color: white;
+}
+
+.certificate-text p {
+  margin-top: 20px;
+  color: white;
+}
+
+.certificate-item:hover .certificate-text {
+  opacity: 1; 
+}
+
+.certificate-item h3 {
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .certificate-item {
+    width: calc(50% - 10px); 
   }
-  
-  h2 {
-    color: #333;
-  }
-  
+}
