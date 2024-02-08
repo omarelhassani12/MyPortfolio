@@ -36,6 +36,22 @@ const experienceData = [
     ),
     icon: require('../../assets/companies/cabinet-medical.png') 
   },
+  {
+    beginYear: '12/2022',
+    endYear: '04/2023',
+    title: 'Mobile Developer | Project Development',
+    company: 'Higher School of Technology',
+    description: (
+      <div>
+          - Conceptualized, engineered, and designed a mobile application named "Tabibi" to streamline company operations, leveraging the collective expertise of our dedicated team.<br />
+          - Collaborated closely with stakeholders to comprehensively understand the intricacies of company workflows, ensuring alignment with project goals.<br />
+          - Implemented an intuitive user interface tailored to meet the needs of team members and administrators, enhancing overall task management and efficiency.<br />
+          - Integrated cutting-edge features such as real-time collaboration tools, notifications, and detailed reporting mechanisms to enhance productivity and decision-making.<br />
+          - Conducted rigorous usability testing and gathered user feedback to iteratively refine the application, resulting in an optimized user experience and enhanced functionality.
+      </div>
+    ),
+    icon: require('../../assets/schools/EST-Safi.png')
+  },  
   { 
     beginYear: '07/2022', 
     endYear: '08/2022', 
