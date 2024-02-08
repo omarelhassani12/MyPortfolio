@@ -1,10 +1,79 @@
-/* Projects.css */
+/* Blog.js */
+#blogs {
+  width: 80%;
+}
 
-section {
-    padding: 2rem;
-  }
-  
-  h2 {
-    color: #333;
-  }
-  
+#filters {
+  width: 30%;
+  position: fixed;
+  left: 15%;
+}
+
+.code-section {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+
+.blog-item {
+  position: relative;
+  width: 800px;
+  background-color: #333;
+  border: 1px solid #000;
+  border-radius: 15px;
+  padding: 10px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.view-button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  color: #fff;
+  background-color: #2ecc71;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.view-button:hover{
+  background-color: #21b05d;
+}
+
+.blog-item h3 a {
+  color: #fff;
+}
+
+.blog-item p {
+  margin: 5px 0;
+}
+
+.filter-section {
+  position: relative;
+  top: 0px;
+  left: -45%;
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.filter-section h2 {
+  margin-top: 0;
+}
+
+#clear-filters-btn {
+  margin-top: 10px;
+  background-color: #2ecc71;
+  position: relative;
+  left: -30%;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#clear-filters-btn:hover {
+  background-color: #21b05d;
+}
