@@ -1,23 +1,9 @@
 // Certificates.js
 import React from 'react';
 import './Certificate.css';
+import {certificates} from './CertificateData.js';
 
 function Certificates() {
-  const certificates = [
-    {
-      name: "Certified Application Security Practitioner(CAP)",
-      issuer: "The SecOps Group",
-      date: "February 2024",
-      backgroundImage: require('../../assets/certificates/CAP.png')
-    },
-    {
-      name: "Certificate in JavaScript Fundamentals",
-      issuer: "ABC Institute",
-      date: "March 2022",
-      backgroundImage: require('../../assets/certificates/CAP.png')
-    },
-  ];
-
   return (
     <section id="certificates">
       <div className="certificates-list">
