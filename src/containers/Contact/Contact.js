@@ -1,6 +1,9 @@
+// Contact.js
 import React, { useState, useRef } from 'react';
 import './Contact.css';
 import emailjs from 'emailjs-com';
+import { ImSpinner9 } from "react-icons/im";
+
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -8,6 +11,9 @@ function Contact() {
     email: '',
     message: ''
   });
+
+  const [loading, setLoading] = useState(false); 
+  const [emailSent, setEmailSent] = useState(false);
 
   const formRef = useRef();
 
@@ -17,8 +23,8 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form data:', formData);
-    
+    setLoading(true); 
+
     emailjs.send('service_wmv5xiw', 'template_lhhecmz', {
       name: formData.name,
       email: formData.email,
@@ -27,11 +33,16 @@ function Contact() {
       .then((result) => {
         console.log('Email sent successfully:', result.text);
         setFormData({ name: '', email: '', message: '' });
+        setLoading(false); 
+        setEmailSent(true);
+        setTimeout(() => {
+          setEmailSent(false);
+        }, 2000);
       }, (error) => {
         console.error('Error sending email:', error.text);
+        setLoading(false);
       });
   };
-  
 
   return (
     <section id="contact">
@@ -59,8 +70,10 @@ function Contact() {
               <label htmlFor="message">Message:</label>
               <textarea id="message" name="message" rows="4" required value={formData.message} onChange={handleChange}></textarea>
             </div>
-            <button type="submit">Connect With Omar</button>
-          </form>
+            <button type="submit" disabled={loading}>
+              {loading ? <ImSpinner9 /> : (emailSent ? 'Email sent successfully!' : 'Connect With Omar')}
+            </button>
+            </form>
         </div>
       </div>
     </section>

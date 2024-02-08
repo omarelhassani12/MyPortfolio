@@ -16,10 +16,10 @@
 
 .contact-content {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  width: calc(50% - 20px); /* Adjusted width */
+  width: calc(50% - 20px);
   margin-left: 0px;
   margin-right: 40px;
-  margin-bottom: 20px; /* Added margin for better spacing */
+  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center; 
@@ -39,8 +39,8 @@
 }
 
 .contact-form-container {
-  width: calc(50% - 20px); /* Adjusted width */
-  margin-bottom: 20px; /* Add margin-bottom for better spacing */
+  width: calc(50% - 20px); 
+  margin-bottom: 20px; 
 }
 
 .contact-form {
@@ -53,6 +53,11 @@
 .contact-form h2 {
   font-size: 24px;
   margin-bottom: 20px;
+}
+.contact-form p {
+  margin-top: 10px;
+  text-align: center;
+  color: #2ECC71;
 }
 
 .form-group {
