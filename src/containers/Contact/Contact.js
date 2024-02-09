@@ -53,7 +53,7 @@ function Contact() {
             I'd love to hear from you; whether you want to learn more about my services, want to collaborate on a project, or simply just want to say hello.
           </p>
           <p>
-            You can fill out the form on the left or get in touch with me at <a href="mailto:your.email@example.com">your.email@example.com</a>.
+            You can fill out the form on the left or get in touch with me at <a href="mailto:elhassani.omar12@gmail.com">elhassani.omar12@gmail.com</a>.
           </p>
         </div>
         <div className="contact-form-container">

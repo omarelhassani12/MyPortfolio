@@ -5,11 +5,10 @@
 }
 
 .vertical-timeline-container {
-  width: 1000px !important;
+  max-width: 1000px;
+  margin: 0 auto; 
 }
 
 .custom-timeline-element {
   color: #fff !important;
 }
-
-
