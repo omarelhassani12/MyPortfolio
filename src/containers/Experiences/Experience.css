@@ -1,12 +1,17 @@
 /* Experience.css */
 
+#experience{
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
 .vertical-timeline-container .custom-timeline-element .vertical-timeline-element-date {
   color: #000;
 }
 
 .vertical-timeline-container {
   max-width: 1000px;
-  margin: 0 auto; 
+  /* margin: 0 auto;  */
 }
 
 .custom-timeline-element {

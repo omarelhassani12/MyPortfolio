@@ -78,7 +78,7 @@ function Blogs() {
         <section id="blogs">
           <div className="blog-list">
             {filteredBlogs.map((blog, index) => (
-              <div className="blog-item" key={index}>
+              <div id="blog-item" key={index}>
                 <h3>{blog.title}</h3>
                 <p>{blog.summary}</p>
                 <p>On {formatDate(blog.date)}</p>

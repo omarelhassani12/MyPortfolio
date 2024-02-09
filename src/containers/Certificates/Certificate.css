@@ -1,21 +1,22 @@
 /* Certificate.css */
-#certificates {
+#certificate {
   width: 100%;
 }
 
-.certificates-list {
+#certificate-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  margin: 20px 20px 20px 0;
 }
 
-.certificate-row {
+#certificate-row {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
-.certificate-item {
+#certificate-item {
   height: 300px;
   position: relative;
   width: calc(20% - 10px); 
@@ -28,7 +29,7 @@
 }
 
 
-.certificate-text {
+#certificate-text {
   position: absolute;
   top: 50%;
   left: 50%;

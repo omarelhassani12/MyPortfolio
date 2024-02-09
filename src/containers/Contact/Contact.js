@@ -46,8 +46,8 @@ function Contact() {
 
   return (
     <section id="contact">
-      <div className="contact-container">
-        <div className="contact-content">
+      <div id="contact-container">
+        <div id="contact-content">
           <h2>Let's connect!</h2>
           <p>
             I'd love to hear from you; whether you want to learn more about my services, want to collaborate on a project, or simply just want to say hello.
@@ -56,17 +56,17 @@ function Contact() {
             You can fill out the form on the left or get in touch with me at <a href="mailto:elhassani.omar12@gmail.com">elhassani.omar12@gmail.com</a>.
           </p>
         </div>
-        <div className="contact-form-container">
-          <form className="contact-form" ref={formRef} onSubmit={handleSubmit}>
-            <div className="form-group">
+        <div id="contact-form-container">
+          <form id="contact-form" ref={formRef} onSubmit={handleSubmit}>
+            <div id="form-group">
               <label htmlFor="name">Name:</label>
               <input type="text" id="name" name="name" required value={formData.name} onChange={handleChange} />
             </div>
-            <div className="form-group">
+            <div id="form-group">
               <label htmlFor="email">Email:</label>
               <input type="email" id="email" name="email" required value={formData.email} onChange={handleChange} />
             </div>
-            <div className="form-group">
+            <div id="form-group">
               <label htmlFor="message">Message:</label>
               <textarea id="message" name="message" rows="4" required value={formData.message} onChange={handleChange}></textarea>
             </div>

@@ -5,11 +5,11 @@ import {certificates} from './CertificateData.js';
 
 function Certificates() {
   return (
-    <section id="certificates">
-      <div className="certificates-list">
+    <section id="certificate">
+      <div id="certificate-list">
         {certificates.map((certificate, index) => (
-          <div className="certificate-item" key={index} style={{ backgroundImage: `url(${certificate.backgroundImage})` }}>
-            <div className="certificate-text">
+          <div id="certificate-item" key={index} style={{ backgroundImage: `url(${certificate.backgroundImage})` }}>
+            <div id="certificate-text">
               <h3>{certificate.name}</h3>
               <p>Issuer: <b>{certificate.issuer}</b></p>
               <p>Date of Issuance: <b>{certificate.date}</b></p>

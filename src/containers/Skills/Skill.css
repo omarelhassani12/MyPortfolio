@@ -2,36 +2,35 @@
 
 #skills {
   width: 100%;
+  overflow-x: hidden;
 }
 
-.skills-container {
+#skills-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
-.skill-card {
-  width: calc(20% - 40px); 
+#skill-card {
+  width: calc(20% - 40px);
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   background-color: #333;
   color: #fff;
-  margin-bottom: 20px;
-  margin-right: 20px; 
+  margin: 20px 20px 20px 0;
 }
 
-
-.skill-card h3 {
+#skill-card h3 {
   text-align: center;
   margin-bottom: 10px;
 }
 
-.skill-card ul {
+#skill-card ul {
   padding-left: 20px;
 }
 
-.skill-card li {
+#skill-card li {
   list-style: none;
   margin-bottom: 5px;
 }

@@ -6,9 +6,9 @@ import { skillCards } from './SkillData.js';
 function Skills() {
   return (
     <section id="skills">
-      <div className="skills-container">
+      <div id="skills-container">
         {skillCards.map((card, index) => (
-          <div className="skill-card" key={index}>
+          <div id="skill-card" key={index}>
             <h3>{card.title}</h3>
             <ul>
               {card.skills.map((skill, index) => (
