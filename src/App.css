@@ -9,14 +9,21 @@ body {
 .app-container {
   display: flex;
   flex-direction: column;
-  height: 100vh; 
+  height: 100vh;
 }
 
 .header-nav-container {
-  flex: 0 0 auto; 
+  flex: 0 0 auto;
 }
 
 .content-container {
-  flex: 1; 
+  flex: 1;
   overflow-y: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .app-container {
+    min-height: auto; 
+    height: auto;
+  }
 }

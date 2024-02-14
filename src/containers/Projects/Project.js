@@ -57,6 +57,34 @@ function Projects() {
     }
   };
 
+
+  //
+  const renderIcons = () => {
+    if (window.innerWidth <= 768) {
+      return (
+        <>
+          <a href={selectedProject.url} target="_blank" rel="noopener noreferrer" className="icon-link">
+            <i className="fas fa-external-link-alt icon"></i>
+          </a>
+          <a href={selectedProject.githubUrl} target="_blank" rel="noopener noreferrer" className="icon-link">
+            <i className="fab fa-github icon"></i>
+          </a>
+        </>
+      );
+    } else {
+      return (
+        <>
+          <a href={selectedProject.url} target="_blank" rel="noopener noreferrer" className="icon-link">
+            <i className="fas fa-external-link-alt icon"></i> <span>View Project</span>
+          </a>
+          <a href={selectedProject.githubUrl} target="_blank" rel="noopener noreferrer" className="icon-link">
+            <i className="fab fa-github icon"></i> <span>View GitHub</span>
+          </a>
+        </>
+      );
+    }
+  };
+
   return (
     <div className="projects-container">
       <div className="filter-container">
@@ -107,16 +135,8 @@ function Projects() {
         <div className="modal-header">
           <h2>{selectedProject?.title}</h2>
           <div className="modal-icons">
-            {selectedProject && (
-              <>
-                <a href={selectedProject.url} target="_blank" rel="noopener noreferrer" className="icon-link">
-                  <i className="fas fa-external-link-alt icon"></i> <span>View Project</span>
-                </a>
-                <a href={selectedProject.githubUrl} target="_blank" rel="noopener noreferrer" className="icon-link">
-                  <i className="fab fa-github icon"></i> <span>View GitHub</span>
-                </a>
-              </>
-            )}
+          {selectedProject && renderIcons()}
+
           </div>
           <button className="close-button" onClick={handleModalClose}>X</button>
         </div>

@@ -100,3 +100,24 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: #229250;
 }
+
+@media screen and (max-width: 768px) {
+  #contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+
+  #contact-content {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  #contact-form-container {
+    width: 100%;
+    max-width: 400px; 
+    position: relative;
+    right: 20px;
+  }
+}

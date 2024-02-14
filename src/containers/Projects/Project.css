@@ -1,6 +1,6 @@
-/* Project.css */
+/* project.css */
 
-.projects-container {
+ .projects-container {
   max-width: 1000px;
   width: 100%;
   margin: 0 auto;
@@ -11,10 +11,6 @@
   top: 35%;
   left: 20px;
   z-index: 1;
-}
-
-label {
-  margin-right: 10px;
 }
 
 #filter-select {
@@ -28,7 +24,6 @@ label {
   flex-wrap: wrap;
   gap: 22px;
   justify-content: flex-start;
-  margin-top: 0;
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -93,18 +88,12 @@ label {
   opacity: 1; 
 }
 
-.pagination{
+.pagination {
   display: flex;
   justify-content: space-between;
 }
-.paginationButtons {
-  display: flex;
-  justify-content: flex-end;
-  width: 20%;
 
-}
-
-.paginationButtons .paginationButton{
+.paginationButtons .paginationButton {
   background-color: #e74c3c;
   color: #fff;
   padding: 5px 10px;
@@ -126,4 +115,55 @@ label {
   cursor: not-allowed;
 }
 
+@media screen and (max-width: 768px) {
+  .project-card {
+    width: calc(50% - 20px);
+  }
+  .projects-list {
+    margin-left: 10px;
+    margin-right: -20px;
+    gap: 10px;
+  }
+  .projects-container{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 
+  .filter-container {
+    position: static;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0 10px;
+  }
+
+  .modal-body {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .modal-left,
+  .modal-right {
+    width: 100%;
+  }
+
+  .image-container {
+    order: 2;
+  }
+
+  .content-container {
+    display: flex;
+  }
+
+  .tools-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .tool {
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+}

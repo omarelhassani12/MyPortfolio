@@ -1,5 +1,4 @@
 /* Navigation.css */
-
 nav {
   background-color: #444;
   padding: 0.5rem;
@@ -10,9 +9,8 @@ nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex; 
+  display: flex;
   justify-content: space-around;
-
 }
 
 nav li {
@@ -33,4 +31,28 @@ nav li a.active {
   text-decoration: none;
   font-weight: bold;
   color: #2ECC71;
+}
+
+.mobile-nav-icon {
+  display: none;
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  nav ul {
+    display: none;
+  }
+  
+  .mobile-nav-icon {
+    display: block; 
+  }
+  
+  .nav-links.show {
+    display: flex; 
+    flex-direction: column;
+  }
+
+  .nav-links li {
+    margin: 0;
+  }
 }

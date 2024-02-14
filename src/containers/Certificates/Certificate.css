@@ -57,7 +57,8 @@
 }
 
 @media screen and (max-width: 768px) {
-  .certificate-item {
-    width: calc(50% - 10px); 
+  #certificate-item {
+    width: calc(100% - 10px); 
+    margin-right: 0;
   }
 }

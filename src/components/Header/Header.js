@@ -1,5 +1,3 @@
-// Header.js
-
 import React from 'react';
 import './Header.css';
 import logoImage from '../../assets/img/Logo.png';
@@ -8,6 +6,7 @@ import meImage from '../../assets/img/perssonalImg.jpg';
 function Header() {
   const userName = "EL HASSANI Omar";
   const Headline = "Web & Mobile Developer";
+
   return (
     <header>
       <div className="left">

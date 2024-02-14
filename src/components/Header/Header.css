@@ -8,20 +8,30 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap; 
   z-index: 1;
+}
+
+.left,
+.right {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; 
+  border: none;
 }
 
 .left img,
 .right img {
-  width: 150px;
-  height: 150px;
+  width: 100%;
+  height: 100%;
   border-radius: 50%; 
-  border: none; 
+  border: none;
 }
 
 .center {
   flex: 1;
   text-align: center;
+  margin-top: 1rem;
 }
 
 h1 {
@@ -32,4 +42,16 @@ p {
   margin: 0;
   font-style: italic;
   color: #aaa;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: right;
+  }
+
+  .right {
+    display: none; 
+  }
+
 }

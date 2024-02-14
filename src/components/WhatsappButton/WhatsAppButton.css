@@ -1,52 +1,54 @@
-/* WhatsAppButton.css */
-
 .whatsapp-button {
-    position: fixed;
-    bottom: 20px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  animation: rotateAnimation 3s infinite linear;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-button::before {
+  content: '';
+  background-image: url('../../assets/img/qrcode.jpg');
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  bottom: 100%;
+  left: 40%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.whatsapp-button:hover::before {
+  opacity: 1;
+}
+
+@keyframes rotateAnimation {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.whatsapp-button img {
+  width: 60px;
+  height: 60px;
+}
+
+@media screen and (max-width: 768px) {
+  .whatsapp-button {
+    bottom: 10px;
     right: 20px;
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    padding: 0;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-    animation: rotateAnimation 3s infinite linear;
   }
-  
-  .whatsapp-button:hover {
-    transform: scale(1.1);
-  }
-
-  .whatsapp-button::before {
-    content: '';
-    background-image: url('../../assets/img/qrcode.jpg');
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px; /* Adjust the width of the icon */
-    height: 100px; /* Adjust the height of the icon */
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-  }
-
-  .whatsapp-button:hover::before {
-    opacity: 1;
-  }
-  
-
-  
-  @keyframes rotateAnimation {
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  
-  .whatsapp-button img {
-    width: 60px;
-    height: 60px;
-  }
-  
+}
