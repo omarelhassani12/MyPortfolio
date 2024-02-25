@@ -68,6 +68,8 @@
 .modal-right {
     flex: 1;
     padding-left: 20px;
+    display: flex;
+    align-items: center;
 }
 
 .content {
@@ -101,12 +103,22 @@
     position: relative;
     width: 100%;
     height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
   
-.image-container img {
-    width: 100%;
+/* .image-container img {
+    width: 40%;
     height: auto;
+} */
+.image-container img {
+  max-width: 55%;
+  height: auto;
+  display: block; 
+  margin: 0 auto; 
 }
+
   
 .navigation-buttons {
     position: absolute;
@@ -143,7 +155,7 @@
   
   .icon-link {
     margin-right: 10px;
-    color: #2ecc71; /* Change color as needed */
+    color: #2ecc71;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -159,10 +171,10 @@
     cursor: pointer;
     padding: 0;
     font-size: 24px;
-    color: #e74c3c; /* Close button color */
+    color: #e74c3c; 
   }
   
   .close-button:hover {
-    color: #c0392b; /* Close button hover color */
+    color: #c0392b; 
   }
   

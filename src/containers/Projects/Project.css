@@ -68,7 +68,8 @@
 }
 
 .project-content h3 a{
-  color : #2ECC71;
+  /* color : #2ECC71; */
+  color: #c6c6c6;
 }
 
 .project-card:hover .project-content {

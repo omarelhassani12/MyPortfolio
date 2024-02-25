@@ -60,30 +60,43 @@ function Projects() {
 
   //
   const renderIcons = () => {
+    if (!selectedProject || (!selectedProject.url && !selectedProject.githubUrl)) {
+      return null; 
+    }
+  
     if (window.innerWidth <= 768) {
       return (
         <>
-          <a href={selectedProject.url} target="_blank" rel="noopener noreferrer" className="icon-link">
-            <i className="fas fa-external-link-alt icon"></i>
-          </a>
-          <a href={selectedProject.githubUrl} target="_blank" rel="noopener noreferrer" className="icon-link">
-            <i className="fab fa-github icon"></i>
-          </a>
+          {selectedProject.url && (
+            <a href={selectedProject.url} target="_blank" rel="noopener noreferrer" className="icon-link">
+              <i className="fas fa-external-link-alt icon"></i>
+            </a>
+          )}
+          {selectedProject.githubUrl && (
+            <a href={selectedProject.githubUrl} target="_blank" rel="noopener noreferrer" className="icon-link">
+              <i className="fab fa-github icon"></i>
+            </a>
+          )}
         </>
       );
     } else {
       return (
         <>
-          <a href={selectedProject.url} target="_blank" rel="noopener noreferrer" className="icon-link">
-            <i className="fas fa-external-link-alt icon"></i> <span>View Project</span>
-          </a>
-          <a href={selectedProject.githubUrl} target="_blank" rel="noopener noreferrer" className="icon-link">
-            <i className="fab fa-github icon"></i> <span>View GitHub</span>
-          </a>
+          {selectedProject.url && (
+            <a href={selectedProject.url} target="_blank" rel="noopener noreferrer" className="icon-link">
+              <i className="fas fa-external-link-alt icon"></i> <span>View Project</span>
+            </a>
+          )}
+          {selectedProject.githubUrl && (
+            <a href={selectedProject.githubUrl} target="_blank" rel="noopener noreferrer" className="icon-link">
+              <i className="fab fa-github icon"></i> <span>View GitHub</span>
+            </a>
+          )}
         </>
       );
     }
   };
+  
 
   return (
     <div className="projects-container">

@@ -1,8 +1,21 @@
 import NoImg from '../../assets/projects/no-img.jpg';
 
-import TabibiImg from '../../assets/projects/Tabibi.png';
-import AppointifyImg from '../../assets/projects/Appointify.png';
+import TabibiImg from '../../assets/projects/Tabibi/Cover-Tabibi.png';
+import AppointifyImg from '../../assets/projects/Appointify/1Appointify.png';
 import BarinWaveImg from '../../assets/projects/BrainWave.png';
+import AbsenceImg from '../../assets/projects/absence.png';
+import MedicalImg from '../../assets/projects/medicalapp.png';
+import ScentitImg from '../../assets/projects/Scentit/Candle.png';
+import TabibiWebImg from '../../assets/projects/TabibiWeb/login.png';
+
+
+//including all image for each one
+import TabibiImages from './images/tabibi';
+import AbsenceImages from './images/absence';
+import MedicalImages from './images/medical';
+import AppointifyImages from './images/appointify';
+import ScentitImages from './images/scentit';
+import TabibiWebImages from './images/tabibiWeb';
 
 export const allProjects = [
   { 
@@ -12,11 +25,7 @@ export const allProjects = [
     image: TabibiImg,
     url:'https://youtu.be/9ya1XUMEOTs',
     githubUrl: 'https://github.com/omarelhassani12/Tabibi',
-    images: [
-      require('../../assets/companies/devosoft.png'),
-      require('../../assets/companies/ofppt.png'),
-      require('../../assets/companies/cabinet-medical.png')
-    ],
+    images: Object.values(TabibiImages),
     tools:[
         'Flutter/Dart',
         'NodeJs',
@@ -26,6 +35,11 @@ export const allProjects = [
         'Socket.io',
         'Cloudinary',   
         'MySQL',  
+        <div></div>,
+        'UML',
+        'Figma',
+        'Postman',
+        'Adobe illistrator',
     ],
     description: [
         <span><b>Healthcare App Development:</b> Tabibi is a mobile application designed to provide convenient access to healthcare services. Users can view their urgency case, consult with doctors remotely, and access their medical records securely through the app.</span>,
@@ -40,14 +54,10 @@ export const allProjects = [
     id: 1, 
     title: 'Absence Management System', 
     category: 'Web', 
-    image: NoImg,
-    url:'#',
+    image: AbsenceImg,
     githubUrl: 'https://github.com/omarelhassani12/gestion_d_absence',
-    images: [
-        require('../../assets/companies/devosoft.png'),
-        require('../../assets/companies/ofppt.png'),
-        require('../../assets/companies/cabinet-medical.png')
-    ],
+    images: Object.values(AbsenceImages),
+
     tools:[
         'NodeJs',
         'Html',
@@ -68,24 +78,44 @@ export const allProjects = [
     id: 2, 
     title: 'Medical Cabinet System', 
     category: 'Web', 
-    image: NoImg,
-    url:'#',
-    githubUrl: 'https://github.com/omarelhassani12/Medical_Web_site'
+    image: MedicalImg,
+    githubUrl: 'https://github.com/omarelhassani12/Medical_Web_site',
+    images: Object.values(MedicalImages),
+    tools:[
+      'Node.js',
+      'Html',
+      'Css',
+      'Js',
+      'MySQL',  
+      'Ajax.js',  
+  ],
   },
   { 
     id: 3, 
     title: 'Appointify', 
     category: 'Mobile', 
     image: AppointifyImg,
-    url:'#',
-    githubUrl: 'https://github.com/omarelhassani12/Appointify'
+    githubUrl: 'https://github.com/omarelhassani12/Appointify',
+    images: Object.values(AppointifyImages),
+    tools:[
+      'Flutter/Dart',
+      'Figma',
+      'Maps',
+    ],
+    description: [
+      <span><b>Appointment Management Application:</b> Appointify is a versatile mobile application designed to simplify the process of managing appointments for businesses and clients. It offers comprehensive features for scheduling, tracking, and communicating appointments, enhancing productivity and client satisfaction.</span>,
+      <span><b>Seamless Multi-Platform Experience:</b> Developed using Flutter and Dart, Appointify ensures a seamless user experience across various platforms, including iOS and Android devices. This cross-platform compatibility allows users to access the app from their preferred devices, ensuring convenience and accessibility.</span>,
+      // <span><b>Robust Backend Infrastructure:</b> Powered by Node.js and MySQL, Appointify's backend system efficiently manages data and facilitates secure communication between businesses and clients. Real-time updates and notifications are supported, enabling timely interactions and smooth appointment management.</span>,
+      <span><b>Intuitive User Interface:</b> Appointify delivers an intuitive and user-friendly interface, ensuring easy navigation and accessibility for users of all levels. Leveraging Flutter and Dart widgets, the app's frontend is designed to create visually appealing and interactive elements, providing a delightful user experience.</span>,
+      // <span><b>Cloud Integration:</b> Integration with cloud services such as Cloudinary enables efficient storage and management of multimedia content within the app. This ensures scalability and accessibility of data, enhancing the overall functionality of the app.</span>,
+      <span><b>Continuous Improvement:</b> Appointify is committed to continuous enhancement through regular updates and user feedback. By staying updated with technological advancements and user needs, Appointify aims to remain a reliable and innovative solution for appointment management.</span>,
+    ],  
   },
   { 
     id: 4, 
     title: 'Saska', 
     category: 'Design', 
     image: NoImg,
-    url:'#',
     githubUrl: '#'
   },
   { 
@@ -93,31 +123,51 @@ export const allProjects = [
     title: 'Stock Management System', 
     category: 'Web', 
     image: NoImg,
-    url:'#',
-    githubUrl: 'https://github.com/omarelhassani12/Management-stock'
+    githubUrl: 'https://github.com/omarelhassani12/Management-stock',
+    images: null,
+    tools:[
+      'HTML',
+      'CSS',
+      'JS',
+      'PHP',
+      'MySQL',
+      'FPDF',
+    ],
   },
   { 
     id: 6, 
     title: 'Scentit', 
     category: 'Web', 
-    image: NoImg,
-    url:'#',
-    githubUrl: 'https://omarelhassani12.github.io/Scentit/'
+    image: ScentitImg,
+    githubUrl: 'https://omarelhassani12.github.io/Scentit/',
+    images: Object.values(ScentitImages),
+    tools:[
+      'HTML',
+      'CSS',
+      'JS',
+      'Figma',
+    ],
+    description: [
+      <span><b>Candle Store Website:</b> Scentit is a versatile website designed to offer a delightful candle shopping experience. It provides comprehensive features for browsing, purchasing, and exploring various candle products, enhancing customer satisfaction and engagement.</span>,
+      <span><b>Seamless Multi-Platform Experience:</b> Developed using HTML, CSS, and JavaScript, Scentit ensures a seamless user experience across multiple platforms, including desktop and mobile devices. This cross-platform compatibility allows users to access the website from their preferred devices, ensuring convenience and accessibility.</span>,
+      <span><b>Intuitive User Interface:</b> Scentit delivers an intuitive and user-friendly interface, ensuring easy navigation and accessibility for users of all levels. The frontend is designed with HTML, CSS, and JavaScript to create visually appealing and interactive elements, providing a delightful shopping experience.</span>,
+      <span><b>Continuous Improvement:</b> Scentit is dedicated to continuous enhancement through regular updates and user feedback. By staying updated with technological advancements and customer preferences, Scentit aims to remain a reliable and innovative platform for candle enthusiasts.</span>,
+    ],
   },
   { 
     id: 7, 
     title: 'Tabibi Web', 
     category: 'Web', 
-    image: NoImg,
+    image: TabibiWebImg,
     url:'https://youtu.be/9ya1XUMEOTs',
-    githubUrl: 'https://github.com/omarelhassani12/Tabibi_panel'
+    githubUrl: 'https://github.com/omarelhassani12/Tabibi_panel',
+    images: Object.values(TabibiWebImages),
   },
   { 
     id: 8, 
     title: 'Restaurant Reservation', 
     category: 'Design', 
     image: NoImg,
-    url:'#',
     githubUrl: 'https://github.com/omarelhassani12/restaurant_reservation_flutter_app'
   },
   { 
@@ -125,7 +175,6 @@ export const allProjects = [
     title: 'BrainWave', 
     category: 'Mobile', 
     image: BarinWaveImg,
-    url:'#',
     githubUrl: 'https://github.com/omarelhassani12/school_app'
   },
   { 
@@ -133,7 +182,6 @@ export const allProjects = [
     title: 'AsrooShop', 
     category: 'Mobile', 
     image: NoImg,
-    url:'#',
     githubUrl: 'https://github.com/omarelhassani12/AsrooShop-using-flutter-and-firebase'
   },
   { 
@@ -141,7 +189,6 @@ export const allProjects = [
     title: 'Interns Management System', 
     category: 'Web', 
     image: NoImg,
-    url:'#',
     githubUrl: 'https://github.com/omarelhassani12/Stagiares-management-'
   },
   { 
@@ -149,7 +196,6 @@ export const allProjects = [
     title: 'Staffs Management System', 
     category: 'Web', 
     image: NoImg,
-    url:'#',
     githubUrl: 'https://github.com/omarelhassani12/SimpleStaffManagement'
   },
 ];
