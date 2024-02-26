@@ -3,7 +3,7 @@ import NoImg from '../../assets/projects/no-img.jpg';
 import TabibiImg from '../../assets/projects/Tabibi/Cover-Tabibi.png';
 import AppointifyImg from '../../assets/projects/Appointify/1Appointify.png';
 import BarinWaveImg from '../../assets/projects/BrainWave.png';
-import AbsenceImg from '../../assets/projects/absence.png';
+import AbsenceImg from '../../assets/projects/AbsenceManagement/absence.png';
 import MedicalImg from '../../assets/projects/medicalapp.png';
 import ScentitImg from '../../assets/projects/Scentit/Candle.png';
 import TabibiWebImg from '../../assets/projects/TabibiWeb/login.png';
@@ -88,7 +88,15 @@ export const allProjects = [
       'Js',
       'MySQL',  
       'Ajax.js',  
-  ],
+    ],
+    description: [
+      <span><b>Medical Cabinet System:</b> The Medical Cabinet System is a web application designed to streamline the management of medical records and appointments for healthcare facilities. It simplifies the process of scheduling appointments, managing patient records, and facilitating communication between doctors and patients.</span>,
+      <span><b>Cross-Platform Compatibility:</b> Built using modern web technologies including Node.js, HTML, CSS, and JavaScript, the Medical Cabinet System ensures compatibility across different devices and platforms. This allows doctors and patients to access the system from desktops, laptops, and mobile devices, providing flexibility and convenience.</span>,
+      <span><b>Backend Infrastructure:</b> Leveraging Node.js and MySQL, the backend infrastructure of the Medical Cabinet System ensures efficient data storage, retrieval, and management. It facilitates secure communication between healthcare providers and patients, ensuring confidentiality and integrity of medical information.</span>,
+      <span><b>User-Friendly Interface:</b> With a user-friendly interface, the Medical Cabinet System offers intuitive navigation and easy access to features for both healthcare providers and patients. HTML and CSS are used to design visually appealing layouts, enhancing the overall user experience.</span>,
+      <span><b>Customization and Scalability:</b> The Medical Cabinet System is highly customizable and scalable, allowing healthcare facilities to tailor the system according to their specific requirements. It supports the addition of new features and functionalities as the needs of healthcare providers and patients evolve.</span>,
+    ]
+    
   },
   { 
     id: 3, 
@@ -105,34 +113,23 @@ export const allProjects = [
     description: [
       <span><b>Appointment Management Application:</b> Appointify is a versatile mobile application designed to simplify the process of managing appointments for businesses and clients. It offers comprehensive features for scheduling, tracking, and communicating appointments, enhancing productivity and client satisfaction.</span>,
       <span><b>Seamless Multi-Platform Experience:</b> Developed using Flutter and Dart, Appointify ensures a seamless user experience across various platforms, including iOS and Android devices. This cross-platform compatibility allows users to access the app from their preferred devices, ensuring convenience and accessibility.</span>,
-      // <span><b>Robust Backend Infrastructure:</b> Powered by Node.js and MySQL, Appointify's backend system efficiently manages data and facilitates secure communication between businesses and clients. Real-time updates and notifications are supported, enabling timely interactions and smooth appointment management.</span>,
       <span><b>Intuitive User Interface:</b> Appointify delivers an intuitive and user-friendly interface, ensuring easy navigation and accessibility for users of all levels. Leveraging Flutter and Dart widgets, the app's frontend is designed to create visually appealing and interactive elements, providing a delightful user experience.</span>,
-      // <span><b>Cloud Integration:</b> Integration with cloud services such as Cloudinary enables efficient storage and management of multimedia content within the app. This ensures scalability and accessibility of data, enhancing the overall functionality of the app.</span>,
       <span><b>Continuous Improvement:</b> Appointify is committed to continuous enhancement through regular updates and user feedback. By staying updated with technological advancements and user needs, Appointify aims to remain a reliable and innovative solution for appointment management.</span>,
     ],  
   },
   { 
     id: 4, 
+    title: 'BrainWave', 
+    category: 'Mobile', 
+    image: BarinWaveImg,
+    githubUrl: 'https://github.com/omarelhassani12/school_app'
+  },
+  { 
+    id: 5, 
     title: 'Saska', 
     category: 'Design', 
     image: NoImg,
     githubUrl: '#'
-  },
-  { 
-    id: 5, 
-    title: 'Stock Management System', 
-    category: 'Web', 
-    image: NoImg,
-    githubUrl: 'https://github.com/omarelhassani12/Management-stock',
-    images: null,
-    tools:[
-      'HTML',
-      'CSS',
-      'JS',
-      'PHP',
-      'MySQL',
-      'FPDF',
-    ],
   },
   { 
     id: 6, 
@@ -165,17 +162,26 @@ export const allProjects = [
   },
   { 
     id: 8, 
+    title: 'Stock Management System', 
+    category: 'Web', 
+    image: NoImg,
+    githubUrl: 'https://github.com/omarelhassani12/Management-stock',
+    images: null,
+    tools:[
+      'HTML',
+      'CSS',
+      'JS',
+      'PHP',
+      'MySQL',
+      'FPDF',
+    ],
+  },
+  { 
+    id: 9, 
     title: 'Restaurant Reservation', 
     category: 'Design', 
     image: NoImg,
     githubUrl: 'https://github.com/omarelhassani12/restaurant_reservation_flutter_app'
-  },
-  { 
-    id: 9, 
-    title: 'BrainWave', 
-    category: 'Mobile', 
-    image: BarinWaveImg,
-    githubUrl: 'https://github.com/omarelhassani12/school_app'
   },
   { 
     id: 10, 
