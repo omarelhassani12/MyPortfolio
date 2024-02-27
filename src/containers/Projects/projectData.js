@@ -3,7 +3,7 @@ import NoImg from '../../assets/projects/no-img.jpg';
 import TabibiImg from '../../assets/projects/Tabibi/Cover-Tabibi.png';
 import AppointifyImg from '../../assets/projects/Appointify/1Appointify.png';
 import BarinWaveImg from '../../assets/projects/BrainWave.png';
-import AbsenceImg from '../../assets/projects/AbsenceManagement/absence.png';
+import AbsenceImg from '../../assets/projects/absence.png';
 import MedicalImg from '../../assets/projects/medicalapp.png';
 import ScentitImg from '../../assets/projects/Scentit/Candle.png';
 import TabibiWebImg from '../../assets/projects/TabibiWeb/login.png';
